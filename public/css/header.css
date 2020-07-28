@@ -1,0 +1,220 @@
+html {
+    scroll-behavior: smooth;
+  }
+.header {
+    background-color: transparent;
+    /* padding-bottom: 1em; */
+    /* padding-top: 1em; */
+  }
+  
+  
+  .header::after {
+    background-color: white;
+    bottom: 0;
+    -webkit-box-shadow: 0 0.0625em 0.5em rgba(0, 0, 0, .3);
+            box-shadow: 0 0.0625em 0.5em rgba(0, 0, 0, .3);
+    content: '';
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    /*z-index: -1;*/
+    border-bottom: 2px solid black;
+  
+  }
+  
+  .header.is-active::after {
+    opacity: 1;
+  }
+.header2 {
+    height: 100vh;
+    background-image: 
+    linear-gradient(to right bottom, 
+   rgba(76, 216, 255, 0.4),
+   rgba(30, 108, 217, 0.4)),
+   url("../img/2.jpg");
+    
+  background-size: cover;
+    background-position: center;
+    position: relative;
+
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.brand-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.brand { font-size: 20px; }
+
+.text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+
+    backface-visibility: hidden;
+    margin-bottom: 30px;
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 7.4px;
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: relative;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+  font-size: 14px;
+}
+/* ------------------------------------------------------------------ */
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,500,700);
+* {
+  box-sizing: border-box;
+}
+
+
+.card-exp {
+  font-family: "Raleway";
+  width: 90%;
+  height: 320px;
+  /* position: absolute; */
+  background: white;
+
+  /*margin: 0 auto;*/
+  /*top: 50%;*/
+  /*left: 50%;*/
+  /*transform: translate(-50%, -50%);*/
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  transition: all 0.3s;
+}
+.card-exp:hover {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+ .card-exp nav {
+  width: 100%;
+  height: 35px;
+  color: #727272;
+  text-transform: uppercase;
+  padding: 12px;
+  border-bottom: 2px solid #efefef;
+  font-size: 12px;
+}
+ 
+.pic{
+  height: 85%;
+  width: 100%;
+}
+.map{
+  height: 15%;
+  width: 100%;
+}
+.card-exp .photo {
+  /*padding: 30px;*/
+  width: 55%;
+  height:285px;
+  text-align: center;
+  float: left;
+}
+.card-exp .photo img {
+  /*max-height: 240px;*/
+  width: 100%;
+  height: 100%;
+}
+ .card-exp .description {
+  /*padding: 30px;*/
+  float: left;
+  width: 45%;
+  border-left: 2px solid #efefef;
+}
+ .card-exp .description h1 {
+  color: #515151;
+  font-weight: 300;
+  padding-top: 15px;
+  margin: 0;
+  font-size: 30px;
+  font-weight: 300;
+}
+ .card-exp .description h2 {
+  color: #515151;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+ .card-exp .description h4 {
+  margin: 0;
+  color: #727272;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+}
+ .card-exp .description p {
+  font-size: 12px;
+  line-height: 20px;
+  color: #727272;
+  padding: 20px 0;
+  margin: 0;
+}
+ .card-exp .description button {
+  outline: 0;
+  border: 0;
+  background: none;
+  border: 1px solid #d9d9d9;
+  padding: 4px 0px;
+  margin-bottom: 30px;
+  color: #515151;
+  text-transform: uppercase;
+  width: 125px;
+  font-family: inherit;
+  margin-right: 5px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+
+}
+ .card-exp .description button:hover {
+  border: 1px solid #aedaa6;
+  color: #aedaa6;
+  cursor: pointer;
+}
