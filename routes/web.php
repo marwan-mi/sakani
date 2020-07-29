@@ -28,29 +28,7 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
 
     
 
-    // ------------------------------------posts--------------------------------------
-
-    Route::get('/post/create',[
-        'uses'=>'PostsController@create',
-        'as'=>'post.create'
-    ]);
     
-    Route::get('/posts',[
-        'uses'=>'PostsController@index',
-        'as'=>'posts'
-    ]);
-    Route::get('/post/edit/{id}',[
-        'uses'=>'PostsController@edit',
-        'as'=>'post.edit'
-    ]);
-    Route::post('/post/update/{id}',[
-        'uses'=>'PostsController@update',
-        'as'=>'post.update'
-    ]);
-    Route::post('/post/store',[
-        'uses'=>'PostsController@store',
-        'as'=>'post.store'
-    ]);
      // --------------------------------------categories-----------------------------------------
 
      Route::get('/category/create',[
@@ -126,24 +104,24 @@ Route::group(['prefix'=>'agency','middleware'=>'auth'],function(){
     // ------------------------------------locals--------------------------------------
 
     Route::get('/local/create',[
-        'uses'=>'LocalsController@create',
+        'uses'=>'LocalesController@create',
         'as'=>'local.create'
     ]);
     
     Route::post('/local/store',[
-        'uses'=>'LocalsController@store',
+        'uses'=>'LocalesController@store',
         'as'=>'local.store'
     ]);
     Route::get('/locals',[
-        'uses'=>'LocalsController@index',
+        'uses'=>'LocalesController@index',
         'as'=>'locals'
     ]);
     Route::get('/local/edit/{id}',[
-        'uses'=>'LocalsController@edit',
+        'uses'=>'LocalesController@edit',
         'as'=>'local.edit'
     ]);
     Route::post('/local/update/{id}',[
-        'uses'=>'LocalsController@update',
+        'uses'=>'LocalesController@update',
         'as'=>'local.update'
     ]);
 });

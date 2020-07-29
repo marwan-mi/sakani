@@ -8,11 +8,10 @@
         <img src="{{asset('img/logo2.png')}}" width="260px" height="190px"> 
         <div> 
             <ul class="flip4"> 
-                <li>Villas</li>
                 <li>Apartements</li>
-                <li>Lands</li> 
                 <li>Old houses</li>
                 <li>Stodios</li>  
+                <li>Villas</li>
             </ul>
         </div>  
     </h4>

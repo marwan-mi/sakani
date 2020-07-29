@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Session;
+use App\Locale;
 use Illuminate\Http\Request;
 
 class LocalsController extends Controller
@@ -34,7 +36,33 @@ class LocalsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+            'wilaya'=>'required',
+            'commune'=>'required',
+            'typel'=>'required|in:villa,apartement,studio,arab',
+            'surface'=>'required|numeric|min:10|max:1000',
+            'pieces'=>'required|numeric|min:1|max:10',
+            // 'garagenum'=>'numeric|min:1|max:5',
+            // 'showernum'=>'numeric|min:1|max:5',
+            // 'etage'=>'numeric|min:0|max:20',
+            // 'pictures'=>'required',
+            'desc'=>'required',
+            'type'=>'required|in:sale,rent',
+            'price'=>'required|digits_between:4,9',
+            'advnum'=>'numeric|min:1|max:11',
+        ]);
+            dd($request)->get();
+        // $local = Locale::create([
+        //     'wilaya'=>$request->wilaya,
+        //     'commune'=>$request->comunne,
+        //     'typel'=>$request->typel,
+        //     'surface'=>$request->surface,
+        //     'pieces'=>$request->pieces,
+        //     'desc'=>$request->desc,
+        //     'type'=>$request->type,
+        //     'price'=>$request->price,
+        // ]);
+        
     }
 
     /**
