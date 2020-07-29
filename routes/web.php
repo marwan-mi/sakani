@@ -122,4 +122,28 @@ Route::group(['prefix'=>'agency','middleware'=>'auth'],function(){
         'uses'=>'ProfilesController@update_agency',
         'as'=>'agency.profile.update'
     ]);
+    
+    // ------------------------------------locals--------------------------------------
+
+    Route::get('/local/create',[
+        'uses'=>'LocalsController@create',
+        'as'=>'local.create'
+    ]);
+    
+    Route::post('/local/store',[
+        'uses'=>'LocalsController@store',
+        'as'=>'local.store'
+    ]);
+    Route::get('/locals',[
+        'uses'=>'LocalsController@index',
+        'as'=>'locals'
+    ]);
+    Route::get('/local/edit/{id}',[
+        'uses'=>'LocalsController@edit',
+        'as'=>'local.edit'
+    ]);
+    Route::post('/local/update/{id}',[
+        'uses'=>'LocalsController@update',
+        'as'=>'local.update'
+    ]);
 });

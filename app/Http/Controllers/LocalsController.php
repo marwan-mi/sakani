@@ -23,7 +23,7 @@ class LocalsController extends Controller
      */
     public function create()
     {
-        //
+        return view('agency.locals.add');
     }
 
     /**

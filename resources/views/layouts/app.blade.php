@@ -64,7 +64,7 @@
                             <ul class="list-group" >
                                 <li class="list-group l1"><a href=""><i class="fa fa-dashboard fa-lg" ></i>&nbsp Dashboard</a></li>
                                 <li class="list-group l4"><a href="{{route('edit.profile')}}"><i class="fa fa-pencil fa-lg" ></i>&nbsp Edit profile</a></li>
-                                <li class="list-group l9"><a href=""><i class="fa fa-plus fa-lg" ></i>&nbsp Add local</a></li>
+                                <li class="list-group l9"><a href="{{route('local.create')}}"><i class="fa fa-plus fa-lg" ></i>&nbsp Add local</a></li>
                                 <li class="list-group l10"><a href=""><i class="fa fa-file-image-o fa-lg" ></i>&nbsp All locals</a></li>
                                 <li class="list-group l11"><a href=""><i class="fa fa-trash fa-lg" ></i>&nbsp Trashed Locals</a></li>
                                 <li class="list-group l12"><a href=""><i class="fa fa-sliders fa-lg" ></i>&nbsp Settings</a></li>
