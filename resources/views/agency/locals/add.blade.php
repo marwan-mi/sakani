@@ -26,11 +26,10 @@
                    </div>
                    <div class="form-group col-lg-5">
                        <label for="title">Local Type</label><br>
-                       <select name="typel" id="cetegory" class="form-control">
-                           <option value="villa">Villa</option>
-                           <option value="apartement">Apartement</option>
-                           <option value="studio">Studio</option>
-                           <option value="arab">Arab house</option>
+                       <select name="category_id" id="cetegory" class="form-control">
+                            @foreach($categories as $cat)
+                            <option value="{{$cat->id}}">{{$cat->name}}</option>
+                            @endforeach
                        </select>
                    </div>
                    
@@ -59,32 +58,32 @@
 
                        <div style="display: flex;justify-content: space-around;align-items: center;">
                         <div class="checkbox " style="display: flex;align-items: center;">
-                        <div><label for=""><input name="garage" type="checkbox" value="">Garage</label></div>&nbsp
-                        <div><input type="number" name="garagenum" class="form-control " style="width:50px;height:30px" max="9" min="1"></div>
+                        <div><label for=""><input name="garage" type="checkbox" value="ga">Garage</label></div>&nbsp
+                        <div><input type="number" name="garagenum" class="form-control " style="width:50px;height:30px"  value="1"  max="9" min="1"></div>
                             
                         </div><br>
                         <div class="checkbox " style="display: flex;align-items: center;">
-                        <div><label for=""><input name="shower" type="checkbox" value="">Shower</label></div>&nbsp
-                        <div><input type="number" name="showernum" class="form-control " style="width:50px;height:30px" max="9" min="1"></div>
+                        <div><label for=""><input name="shower" type="checkbox" value="ba">Bathroom</label></div>&nbsp
+                        <div><input type="number" name="showernum" class="form-control " style="width:50px;height:30px" value="1" max="9" min="1"></div>
                             
                         </div><br>
                         <div class="checkbox ">
-                            <label for=""><input name="gardin" type="checkbox" value="">Gardin</label>
+                            <label for=""><input name="gardin" type="checkbox" value="ga">Gardin</label>
                         </div><br>
                         <div class="checkbox">
-                            <label for=""><input name="pool" type="checkbox" value="">Pool</label>
+                            <label for=""><input name="pool" type="checkbox" value="po">Pool</label>
                         </div><br>
                         <div class="checkbox">
-                            <label for=""><input name="fur" type="checkbox" value="">Furniture</label>
+                            <label for=""><input name="fur" type="checkbox" value="f">Furniture</label>
                         </div><br>
                         <div class="checkbox">
-                            <label for=""><input name="papers" type="checkbox" value="">Papers</label>
+                            <label for=""><input name="papers" type="checkbox" value="p">Papers</label>
                         </div>
                        </div>
                    </div>
                    <div class="form-group col-lg-12">
                        <label for="featured">Pictures of local</label>
-                       <input type="file" multiple name="pictures" class="form-control">
+                       <input type="file" multiple name="pictures[]" class="form-control">
                    </div>
                    <div class="form-group col-lg-12">
                        <label for="content">Description</label>
@@ -114,24 +113,28 @@
                     <div class="form-group col-lg-3">
                        <label for="title">Per</label>
                        <select name="per" id="cetegory" class="form-control">
-                           <option value="">Month</option>
-                           <option value="">Year</option>
+                           <option value="day">Day</option>
+                           <option value="week">Week</option>
+                           <option value="month">Month</option>
+                           <option value="year">Year</option>
                        </select>
                    </div>
                    <div class="form-group col-lg-3">
                        <label for="title">Advance</label>
                        <div style="display: flex;justify-content: space-around;">
-                        <input type="number" name="advnum" class="form-control" style="width:30%" value="1">
+                        <input type="number" name="advnum" class="form-control" style="width:30%" value="1" min="1" max="29">
                         <select name="adv" id="cetegory" class="form-control" style="width:60%">
-                            <option value="">month</option>
-                            <option value="">Year</option>
+                           <option value="day">Day</option>
+                           <option value="week">Week</option>
+                           <option value="month">Month</option>
+                           <option value="year">Year</option>
                         </select>
                        </div>
                        
                    </div>
                    <div class="col-lg-1"></div>
                    
-                   <div class="form-group col-lg-12">
+                   <div class="form-group col-lg-12" style="margin-top:20px">
                        <div class="text-center">
                            <button class="btn btn-success" type="submit">Add Local and shoose main picture</button>
                        </div>

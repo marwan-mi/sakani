@@ -9,7 +9,7 @@
         <div> 
             <ul class="flip4"> 
                 <li>Apartements</li>
-                <li>Old houses</li>
+                <li>Arab houses</li>
                 <li>Stodios</li>  
                 <li>Villas</li>
             </ul>

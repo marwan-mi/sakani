@@ -8,7 +8,7 @@ class Category extends Model
 {
     public function locals(){
         
-        return $this->hasMany('App\Local');
+        return $this->hasMany('App\Locale');
     }
 
 }

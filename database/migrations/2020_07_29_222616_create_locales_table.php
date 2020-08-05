@@ -19,20 +19,25 @@ class CreateLocalesTable extends Migration
 
             $table->string('wilaya');
             $table->string('commune');
-            $table->string('typel');
+            $table->integer('category_id');
             $table->integer('surface');
             $table->integer('pieces');
             $table->text('desc');
             $table->string('vl');
             $table->integer('price');
-            $table->integer('nbrgarage');
-            $table->integer('nbrshower');
+            $table->integer('nbrgarage')->default(0);
+            $table->integer('nbrshower')->default(0);
             
-            $table->integer('etage');
+            $table->integer('etage')->default(0);
             $table->boolean('gardin')->default(0);
             $table->boolean('pool')->default(0);
             $table->boolean('furniture')->default(0);
             $table->boolean('paper')->default(0);
+
+            $table->string('par')->nullable();
+            $table->string('adv')->nullable();
+            $table->integer('advnum')->nullable();
+
 
             $table->softDeletes();
             $table->timestamps();

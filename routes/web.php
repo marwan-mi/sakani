@@ -22,6 +22,7 @@ Route::group(['middleware'=>'auth'],function(){
         'uses'=>'HomeController@index',
         'as'=>'home'
     ]);
+    
 });
 
 Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
@@ -100,28 +101,52 @@ Route::group(['prefix'=>'agency','middleware'=>'auth'],function(){
         'uses'=>'ProfilesController@update_agency',
         'as'=>'agency.profile.update'
     ]);
+    Route::get('/payment',[
+        'uses'=>'HomeController@pay',
+        'as'=>'pay'
+    ]);
     
     // ------------------------------------locals--------------------------------------
 
     Route::get('/local/create',[
-        'uses'=>'LocalesController@create',
+        'uses'=>'LocalsController@create',
         'as'=>'local.create'
     ]);
     
     Route::post('/local/store',[
-        'uses'=>'LocalesController@store',
+        'uses'=>'LocalsController@store',
         'as'=>'local.store'
     ]);
+    Route::post('/local/mainpic',[
+        'uses'=>'ImagesController@main',
+        'as'=>'main'
+    ]);
     Route::get('/locals',[
-        'uses'=>'LocalesController@index',
+        'uses'=>'LocalsController@index',
         'as'=>'locals'
     ]);
     Route::get('/local/edit/{id}',[
-        'uses'=>'LocalesController@edit',
+        'uses'=>'LocalsController@edit',
         'as'=>'local.edit'
     ]);
     Route::post('/local/update/{id}',[
-        'uses'=>'LocalesController@update',
+        'uses'=>'LocalsController@update',
         'as'=>'local.update'
+    ]);
+    Route::get('/local/delete/{id}',[
+        'uses'=>'LocalsController@destroy',
+        'as'=>'local.delete'
+    ]);
+    Route::get('/locals/trashed',[
+        'uses'=>'LocalsController@trash',
+        'as'=>'locals.trashed'
+    ]);
+    Route::get('/local/restore/{id}',[
+        'uses'=>'LocalsController@restore',
+        'as'=>'local.restore'
+    ]);
+    Route::get('/local/deletep/{id}',[
+        'uses'=>'LocalsController@deletep',
+        'as'=>'local.deletep'
     ]);
 });

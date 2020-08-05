@@ -1,0 +1,157 @@
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,500,700);
+
+
+
+.card-exp {
+  font-family: "Raleway";
+  width: 90%;
+  height: 320px;
+  /*position: absolute;*/
+  background: white;
+
+  /*margin: 0 auto;*/
+  /*top: 50%;*/
+  /*left: 50%;*/
+  /*transform: translate(-50%, -50%);*/
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  transition: all 0.3s;
+}
+.card-exp:hover {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+ .card-exp nav {
+  width: 100%;
+  height: 35px;
+  color: #727272;
+  text-transform: uppercase;
+  padding: 12px;
+  border-bottom: 2px solid #efefef;
+  font-size: 12px;
+}
+ 
+.pic{
+  height: 85%;
+  width: 100%;
+}
+.map{
+  height: 15%;
+  width: 100%;
+}
+.card-exp .photo {
+  /*padding: 30px;*/
+  width: 55%;
+  height:285px;
+  text-align: center;
+  float: left;
+}
+.card-exp .photo img {
+  /*max-height: 240px;*/
+  width: 100%;
+  height: 100%;
+}
+ .card-exp .description {
+  /*padding: 30px;*/
+  float: left;
+  width: 45%;
+  border-left: 2px solid #efefef;
+}
+ .card-exp .description h1 {
+  color: #515151;
+  font-weight: 300;
+  padding-top: 15px;
+  margin: 0;
+  font-size: 30px;
+  font-weight: 300;
+}
+ .card-exp .description h2 {
+  color: #515151;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+ .card-exp .description h4 {
+     
+  margin: 0;
+  color: #727272;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+}
+ .card-exp .description p {
+  font-size: 12px;
+  line-height: 20px;
+  color: #727272;
+  padding: 20px 0;
+  margin: 0;
+}
+ .card-exp .description .btn-detail {
+     text-align: center;
+  outline: 0;
+  border: 0;
+  background: none;
+  border: 1px solid #d9d9d9;
+  padding: 4px 0px;
+  margin-bottom: 30px;
+  color: #515151;
+  text-transform: uppercase;
+  width: 125px;
+  font-family: inherit;
+  margin-right: 5px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+
+}
+ .card-exp .description .btn-detail:hover {
+  border: 1px solid rgb(45, 45, 206);
+  color: rgb(45, 45, 206);
+  cursor: pointer;
+}
+
+.card-exp .description .btn-delete {
+    text-align: center;
+
+    outline: 0;
+    border: 0;
+    background: none;
+    border: 1px solid #d9d9d9;
+    padding: 4px 0px;
+    margin-bottom: 30px;
+    color: #515151;
+    text-transform: uppercase;
+    width: 125px;
+    font-family: inherit;
+    margin-right: 5px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+  
+  }
+   .card-exp .description .btn-delete:hover {
+    border: 1px solid rgb(216, 45, 45);
+    color: rgb(216, 45, 45);
+    cursor: pointer;
+  }
+  .card-exp .description .btn-restore {
+    text-align: center;
+    outline: 0;
+    border: 0;
+    background: none;
+    border: 1px solid #d9d9d9;
+    padding: 4px 0px;
+    margin-bottom: 30px;
+    color: #515151;
+    text-transform: uppercase;
+    width: 125px;
+    font-family: inherit;
+    margin-right: 5px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+  
+  }
+   .card-exp .description .btn-restore:hover {
+    border: 1px solid #aedaa6;
+    color: #aedaa6;
+    cursor: pointer;
+  }

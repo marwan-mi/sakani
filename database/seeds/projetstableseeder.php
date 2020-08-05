@@ -11,7 +11,7 @@ class projetstableseeder extends Seeder
      */
     public function run()
     {
-        // factory(App\projet::class,7)->create();
+        
         $user1 = App\User::create([
             'name'=>'marwan',
             'email'=>'marwan@gmail.com',
@@ -19,9 +19,9 @@ class projetstableseeder extends Seeder
             'admin'=>1
         ]);
         App\Profile::create([
-            'id_user'=>$uesr1->id,
+            'user_id'=>$user1->id,
             'avatar'=>'upload\avatar\admin_avatar.png',
-            'Phone-number-1'=>'0665819467',
+            'phone1'=>'0665819467',
             'fb'=>'https://web.facebook.com/'
         ]);
 
@@ -33,9 +33,9 @@ class projetstableseeder extends Seeder
             'admin'=>1
         ]);
         App\Profile::create([
-            'id_user'=>$uesr2->id,
+            'user_id'=>$user2->id,
             'avatar'=>'upload\avatar\admin_avatar.png',
-            'Phone-number-1'=>'0665819467',
+            'phone1'=>'0665819467',
             'fb'=>'https://web.facebook.com/'
         ]);
 
@@ -47,9 +47,9 @@ class projetstableseeder extends Seeder
             'admin'=>1
         ]);
         App\Profile::create([
-            'id_user'=>$uesr3->id,
+            'user_id'=>$user3->id,
             'avatar'=>'upload\avatar\admin_avatar.png',
-            'Phone-number-1'=>'0665819467',
+            'phone1'=>'0665819467',
             'fb'=>'https://web.facebook.com/'
         ]);
 
@@ -61,10 +61,18 @@ class projetstableseeder extends Seeder
             'admin'=>1
         ]);
         App\Profile::create([
-            'id_user'=>$uesr4->id,
+            'user_id'=>$user4->id,
             'avatar'=>'upload\avatar\admin_avatar.png',
-            'Phone-number-1'=>'0665819467',
+            'phone1'=>'0665819467',
             'fb'=>'https://web.facebook.com/'
+        ]);
+
+        // ------------------------- agency ------------------------------
+        $ag = App\User::create([
+            'name'=>'ayob',
+            'email'=>'ayob@gmail.com',
+            'password'=>bcrypt('password'),
+            'admin'=>0
         ]);
 
     }

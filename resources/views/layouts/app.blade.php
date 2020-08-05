@@ -13,7 +13,10 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/toastr.css') }}" rel="stylesheet">
     <link href="{{ asset('css/dashstyle.css') }}" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
+    
+    
     @yield('style')
 </head>
 <body>
@@ -23,7 +26,7 @@
         @if(Auth::check())
         <div class="container-fluid">
             <div class="row">
-            <div class="col-lg-2">
+            <div class="col-lg-2 ">
                 <nav class="menu" tabindex="0" >
                 <div class="smartphone-menu-trigger"></div>
                     <header class="avatar">
@@ -62,12 +65,12 @@
                     @else
                     <div class="" >
                             <ul class="list-group" >
-                                <li class="list-group l1"><a href=""><i class="fa fa-dashboard fa-lg" ></i>&nbsp Dashboard</a></li>
+                                <li class="list-group l1"><a href="{{route('home')}}"><i class="fa fa-dashboard fa-lg" ></i>&nbsp Dashboard</a></li>
                                 <li class="list-group l4"><a href="{{route('edit.profile')}}"><i class="fa fa-pencil fa-lg" ></i>&nbsp Edit profile</a></li>
                                 <li class="list-group l9"><a href="{{route('local.create')}}"><i class="fa fa-plus fa-lg" ></i>&nbsp Add local</a></li>
-                                <li class="list-group l10"><a href=""><i class="fa fa-file-image-o fa-lg" ></i>&nbsp All locals</a></li>
-                                <li class="list-group l11"><a href=""><i class="fa fa-trash fa-lg" ></i>&nbsp Trashed Locals</a></li>
-                                <li class="list-group l12"><a href=""><i class="fa fa-sliders fa-lg" ></i>&nbsp Settings</a></li>
+                                <li class="list-group l10"><a href="{{route('locals')}}"><i class="fa fa-file-image-o fa-lg" ></i>&nbsp All locals</a></li>
+                                <li class="list-group l11"><a href="{{route('locals.trashed')}}"><i class="fa fa-trash fa-lg" ></i>&nbsp Trashed Locals</a></li>
+                                <li class="list-group l12"><a href="{{route('pay')}}"><i class="fa fa-credit-card fa-lg" ></i>&nbsp Payment</a></li>
                             <br>
                                 <!-- <li > -->
                                     <a href="{{ route('logout') }}" class="btn btn-logout " style="margin-left:50px"
@@ -161,7 +164,7 @@
             </div>
         </nav>
 
-        <div class="col-lg-8    ">
+        <div class="col-lg-8  col-sm-10  col-md-10">
                 <main>
                     <!-- <div class=""> -->
                         <div class=" helper" >

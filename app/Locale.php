@@ -11,7 +11,7 @@ class Locale extends Model
     use SoftDeletes;
 
     protected $fillable=[
-        'title','content','category_id','featured','user_id','slug'
+        'id_user','wilaya','commune','category_id','surface','pieces','desc','vl','price','nbrgarage','nbrshower','etage','gardin','pool','furniture','paper',
     ];
 
     protected $dates=['deleted_at'];
@@ -24,7 +24,7 @@ class Locale extends Model
         return $this->belongsTo('App\User');
     }
     public function images(){
-        return $this->hasMany('App\Locale');
+        return $this->hasMany('App\Image');
     }
     
 }
