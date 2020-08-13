@@ -12,7 +12,7 @@ class FrontController extends Controller
 {
     public function index(){
 
-        return view('welcome')->with('locals',Locale::orderBy('created_at','desc')->take(4)->get())
+        return view('index')->with('locals',Locale::orderBy('created_at','desc')->take(4)->get())
                             ->with('s_locals',Locale::where('vl','sale')->take(5)->get())
                             ->with('r_locals',Locale::where('vl','rent')->take(5)->get())
                             ->with('categories',Category::all());
