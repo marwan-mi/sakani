@@ -19,9 +19,15 @@
                        <label for="title">Commune</label>
                        <select name="commune" id="cetegory" class="form-control">
                            <option value="blida">Blida</option>
-                           <option value="oulad yaich">Oulad yaich</option>
-                           <option value="mozaia">Mozaia</option>
-                           <option value="afroun">Afroun</option>
+                           <option value="oulad yaich">Ouled Yaich</option>
+                           <option value="mozaia">Mouzaïa</option>
+                           <option value="afroun">Bouinan</option>
+                           <option value="afroun">El Affroun</option>
+                           <option value="afroun">Larbaa</option>
+                           <option value="afroun">Meftah</option>
+                           <option value="afroun">Oued Alleug</option>
+                           <option value="afroun">Boufarik</option>
+                           <option value="afroun">Bougara</option>
                        </select>
                    </div>
                    <div class="form-group col-lg-5">
@@ -35,7 +41,7 @@
                    
                    
 
-                   <div class="form-group col-lg-3" style="">
+                    <div class="form-group col-lg-3" style="">
                         <label for="title">Surface</label>
                         <div class="" style="display: flex;align-items: center;">
                             <input type="number" name="surface" class="form-control " style="width:90%">
@@ -56,26 +62,35 @@
                     <div class="form-group col-lg-12">
                        <label for="">Options</label>
 
-                       <div style="display: flex;justify-content: space-around;align-items: center;">
-                        <div class="checkbox " style="display: flex;align-items: center;">
-                        <div><label for=""><input name="garage" type="checkbox" value="ga">Garage</label></div>&nbsp
-                        <div><input type="number" name="garagenum" class="form-control " style="width:50px;height:30px"  value="1"  max="9" min="1"></div>
-                            
+                        <div style="display: flex;justify-content: space-around;align-items: center;">
+                            <div class="checkbox " style="display: flex;align-items: center;">
+                                <div><label for=""><input name="garage" type="checkbox" value="ga">Garage</label></div>&nbsp
+                                <div><input type="number" name="garagenum" class="form-control " style="width:50px;height:30px"  value="1"  max="9" min="1">
+                            </div>
                         </div><br>
+
                         <div class="checkbox " style="display: flex;align-items: center;">
-                        <div><label for=""><input name="shower" type="checkbox" value="ba">Bathroom</label></div>&nbsp
-                        <div><input type="number" name="showernum" class="form-control " style="width:50px;height:30px" value="1" max="9" min="1"></div>
-                            
+                            <div>
+                                <label for="">
+                                <input name="shower" type="checkbox" value="ba">Bathroom</label>
+                            </div>&nbsp
+                            <div>
+                                <input type="number" name="showernum" class="form-control " style="width:50px;height:30px" value="1" max="9" min="1">
+                            </div>
                         </div><br>
+
                         <div class="checkbox ">
                             <label for=""><input name="gardin" type="checkbox" value="ga">Gardin</label>
                         </div><br>
+
                         <div class="checkbox">
                             <label for=""><input name="pool" type="checkbox" value="po">Pool</label>
                         </div><br>
+
                         <div class="checkbox">
                             <label for=""><input name="fur" type="checkbox" value="f">Furniture</label>
                         </div><br>
+                        
                         <div class="checkbox">
                             <label for=""><input name="papers" type="checkbox" value="p">Papers</label>
                         </div>

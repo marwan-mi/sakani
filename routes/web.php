@@ -1,5 +1,6 @@
 <?php
-use App\Post;
+use App\Locale;
+use App\Category;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,8 +12,28 @@ use App\Post;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/',[
+    'uses'=>'FrontController@index',
+    'as'=>'index'
+]);
+Route::get('/detail/{slug}',[
+    'uses'=>'FrontController@detail',
+    'as'=>'detail'
+]);
+Route::get('/profile/agence/{slug}',[
+    'uses'=>'FrontController@profile',
+    'as'=>'profile'
+]);
+Route::get('/filter',[
+    'uses'=>'FrontController@filter',
+    'as'=>'filter'
+]);
+
+Route::get('/contact',function(){
+    
+    
+    return view('contact')->with('categories',Category::all());
+
 });
 Auth::routes();
 
@@ -23,6 +44,22 @@ Route::group(['middleware'=>'auth'],function(){
         'as'=>'home'
     ]);
     
+});
+Route::get('/results',function(){
+    // $locals = \App\Locale::where('vl','like','%'.request('query').'%')->get();
+    // $locals = \App\Locale::where([
+    //     ['vl', 'like', '%'.request('query').'%'],
+    //     ['wilaya', 'like', '%'.request('query').'%'],
+    //     ['commune', 'like', '%'.request('query').'%'],
+    // ])->get();
+    $locals = \App\Locale::where('vl','like','%'.request('radio').'%')
+                            ->where('category_id','=',request('category_id'))
+                            ->where('commune','like','%'.request('query').'%')
+                        ->get();
+    
+    return view('search')->with('locals',$locals)
+                        ->with('categories',Category::all());
+
 });
 
 Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){

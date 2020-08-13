@@ -534,6 +534,7 @@ License: http://codecanyon.net/licenses
 	transform-origin: 0 0;
 }
 .showhide .mob-menu--title{
+	background-color: white;
 	position: relative;
 	top: 2px;
 	text-transform: uppercase;

@@ -18,8 +18,8 @@ class LocalsController extends Controller
      */
     public function index()
     {
-        $id_user = Auth::user()->id;
-        $locals = Locale::where('id_user',$id_user)->get();
+        $user_id = Auth::user()->id;
+        $locals = Locale::where('user_id',$user_id)->get();
 
         return view('agency.locals.locals')->with('locals',$locals);
     }
@@ -46,6 +46,9 @@ class LocalsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    
+ 
+    
     public function store(Request $request)
     {
         $this->validate($request,[
@@ -67,7 +70,8 @@ class LocalsController extends Controller
             // dd($request)->get();
         $user = Auth::user();
         $local = Locale::create([
-            'id_user'=>$user->id,
+            'user_id'=>$user->id,
+            
             'wilaya'=>$request->wilaya,
             'commune'=>$request->commune,
             'category_id'=>$request->category_id,
@@ -78,6 +82,16 @@ class LocalsController extends Controller
             'price'=>$request->price,
         ]);
         
+            // generate unique slug 
+        $input = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $input_length = strlen($input);
+        $random_string = '';
+        for($i = 0; $i < 18; $i++) {
+            $random_character = $input[mt_rand(0, $input_length - 1)];
+            $random_string .= $random_character;
+        }
+
+        $local->slug = $random_string.$local->id ;
         // save images
             $files=$request->pictures;
             foreach($files as $file){
@@ -91,7 +105,7 @@ class LocalsController extends Controller
             }
 
             // etage
-            if(($request->typel == ('villa')) || ($request->typel == ('apartement')) || ($request->typel == ('studio'))){
+            if(($request->category_id == 1) || ($request->category_id == 2) || ($request->category_id == 3)){
                 $this->validate($request,[
                     'etage'=>'required|numeric|min:0|max:20',
                 ]);
@@ -100,7 +114,7 @@ class LocalsController extends Controller
             }
 
             // gardin and pool
-            if(($request->typel == ('villa')) || ($request->typel == ('arab'))){
+            if(($request->category_id == 1) || ($request->category_id == 4)){
                 if($request->has('gardin')){
                     $local->gardin = 1;
                     $local->save();
@@ -175,7 +189,7 @@ class LocalsController extends Controller
     {
         $l = Locale::find($id);
         $u = Auth::user();
-        if($l->id_user == $u->id){
+        if($l->user_id == $u->id){
             return view('agency.locals.edit')->with('local',Locale::find($id))
                                         ->with('categories',Category::all());
         }else{
@@ -196,7 +210,7 @@ class LocalsController extends Controller
     {
         $l = Locale::find($id);
         $u = Auth::user();
-        if($l->id_user == $u->id){
+        if($l->user_id == $u->id){
             $this->validate($request,[
                 'wilaya'=>'required',
                 'commune'=>'required',

@@ -3,6 +3,7 @@
 	jQuery.fn.crumegamenu = function(options){
 		var settings;
 		$.extend( settings = {
+			
 			showSpeed: 400,
 			hideSpeed: 300,
 			trigger: "hover",
@@ -15,7 +16,7 @@
 			indentChildren: true,
 			indicatorFirstLevel: "&#xf0d7",
 			indicatorSecondLevel: "&#xf105",
-			scrollable: true,
+			scrollable: false,
 			scrollableMaxHeight: 460
 		}, options);
 		

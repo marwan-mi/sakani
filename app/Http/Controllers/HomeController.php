@@ -27,7 +27,7 @@ class HomeController extends Controller
             return view('home')->with('admin',1);
         }else{
             $id_user = $user->id;
-            $locals = Locale::where('id_user',$id_user)->get();
+            $locals = Locale::where('user_id',$id_user)->get();
             $vs=0;$ps=0;$ss=0;$as=0;$vr=0;$pr=0;$sr=0;$ar=0;
             foreach($locals as $local){
                 if($local->vl == ('sale')){

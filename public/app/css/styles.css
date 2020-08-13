@@ -75,7 +75,7 @@ body {
   position: relative;
   background: #fff;
   color: #acacac;
-  /* font-family: "Varela Round", Arial, "Helvetica Neue", Helvetica, serif; */
+  font-family: "Varela Round", Arial, "Helvetica Neue", Helvetica, serif;
   font-size: 16px;
   font-weight: 400;
   /* line-height: 1.5; */
@@ -2138,7 +2138,7 @@ h6, .h6 {
     top: -10px; }
 
 .blog-details-author {
-  padding: 60px;
+  padding: 60px 60px 60px 60px;
   background-color: #f7f9f9;
   margin-bottom: 60px; }
   .blog-details-author .blog-details-author-thumb {
@@ -3193,7 +3193,8 @@ textarea {
 .nav-add {
   float: right;
   padding: 14px 0;
-  margin: 0; }
+  margin: 0; 
+}
   @media (max-width: 980px) {
     .nav-add {
       float: left; } }
@@ -3210,7 +3211,7 @@ textarea {
         display: block;
         position: absolute;
         left: -6px;
-        top: 4px;
+        /* top: 4px; */
         width: 16px;
         height: 16px;
         line-height: 14px;
@@ -5245,7 +5246,7 @@ body.overlay-enable:before {
     overflow: hidden; }
   .overlay_search .form_search-wrap {
     position: absolute;
-    top: 50%;
+    top: 60%;
     transform: translate(0, -50%);
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
@@ -7618,12 +7619,14 @@ form.w-search {
         opacity: 0; }
       .w-follow .w-follow-wrap .w-follow-item .w-follow-title .w-follow-add.active i.check {
         opacity: 1; }
-
+.w-tags-item{
+  
+}
 .w-tags {
   overflow: hidden; }
   .w-tags .heading {
     margin-bottom: 40px; }
-  .w-tags .tags-wrap a {
+  .w-tags .tags-wrap h4 {
     padding: 10px 15px;
     font-size: 15px;
     color: #acacac;
@@ -7632,11 +7635,12 @@ form.w-search {
     margin-right: 10px;
     margin-bottom: 10px;
     float: left;
-    transition: all .3s ease; }
+    transition: all .3s ease;
+  font-weight: normal; }
     @media (max-width: 1024px) {
-      .w-tags .tags-wrap a {
+      .w-tags .tags-wrap h4 {
         padding: 10px 20px; } }
-    .w-tags .tags-wrap a:hover {
+    .w-tags .tags-wrap h4:hover {
       background-color: #4cc2c0;
       color: #fff;
       border-color: #4cc2c0; }
@@ -7935,112 +7939,3 @@ form.w-search {
 
 
 
-
-
-
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,500,700);
-
-
-
-.card-exp {
-  font-family: "Raleway";
-  width: 90%;
-  height: 320px;
-  /*position: absolute;*/
-  background: white;
-
-  /*margin: 0 auto;*/
-  /*top: 50%;*/
-  /*left: 50%;*/
-  /*transform: translate(-50%, -50%);*/
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  transition: all 0.3s;
-}
-.card-exp:hover {
-  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
- .card-exp nav {
-  width: 100%;
-  height: 35px;
-  color: #727272;
-  text-transform: uppercase;
-  padding: 12px;
-  border-bottom: 2px solid #efefef;
-  font-size: 12px;
-}
- 
-.pic{
-  height: 85%;
-  width: 100%;
-}
-.map{
-  height: 15%;
-  width: 100%;
-}
-.card-exp .photo {
-  /*padding: 30px;*/
-  width: 55%;
-  height:285px;
-  text-align: center;
-  float: left;
-}
-.card-exp .photo img {
-  /*max-height: 240px;*/
-  width: 100%;
-  height: 100%;
-}
- .card-exp .description {
-  /*padding: 30px;*/
-  float: left;
-  width: 45%;
-  border-left: 2px solid #efefef;
-}
- .card-exp .description h1 {
-  color: #515151;
-  font-weight: 300;
-  padding-top: 15px;
-  margin: 0;
-  font-size: 30px;
-  font-weight: 300;
-}
- .card-exp .description h2 {
-  color: #515151;
-  margin: 0;
-  text-transform: uppercase;
-  font-weight: 500;
-}
- .card-exp .description h4 {
-  margin: 0;
-  color: #727272;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 12px;
-}
- .card-exp .description p {
-  font-size: 12px;
-  line-height: 20px;
-  color: #727272;
-  padding: 20px 0;
-  margin: 0;
-}
- .card-exp .description .btn-detail {
-  outline: 0;
-  border: 0;
-  background: none;
-  border: 1px solid #d9d9d9;
-  padding: 4px 0px;
-  margin-bottom: 30px;
-  color: #515151;
-  text-transform: uppercase;
-  width: 125px;
-  font-family: inherit;
-  margin-right: 5px;
-  transition: all 0.3s ease;
-  font-weight: 500;
-
-}
- .card-exp .description .btn-detail:hover {
-  border: 1px solid #aedaa6;
-  color: #aedaa6;
-  cursor: pointer;
-}

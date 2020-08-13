@@ -76,6 +76,16 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+         // generate unique slug 
+         $input = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+         $input_length = strlen($input);
+         $random_string = '';
+         for($i = 0; $i < 18; $i++) {
+             $random_character = $input[mt_rand(0, $input_length - 1)];
+             $random_string .= $random_character;
+         }
+ 
+         $user->slug = $random_string.$local->id ;
 
         $f1=$data['local-picture'];
         $new_f1=time().$f1->getClientOriginalName();

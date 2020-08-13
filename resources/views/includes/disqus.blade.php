@@ -6,8 +6,8 @@
 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
 
 var disqus_config = function () {
-this.page.url = "{{route('single',['id'=>$post->id])}}";  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = "post-{{$post->id}}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+this.page.url = "{{route('detail',['id'=>$local->id])}}";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "local-{{$local->id}}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 
 (function() { // DON'T EDIT BELOW THIS LINE
